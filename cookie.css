@@ -1,0 +1,216 @@
+/* main */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  min-height: 200px;
+  width: 250px;
+  background-image: url('images/background_image.png');
+  background-size: cover;
+}
+
+/* animations */
+@keyframes cookie-shadow {
+    5% {
+      width: 56px;
+    }
+
+    15% {
+      box-shadow: none;
+    }
+
+    90% {
+      box-shadow: 0 1px 10px rgb(155, 234, 250), 0 0 50px rgba(125, 216, 234, 0.872) inset;
+      width: 60px;
+    }
+  }
+
+  #csA {
+    animation-name: cookie-shadow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes jump-shaking {
+    0% {
+      transform: translateX(0) scale(1, 1)
+    }
+
+    5% {
+      transform: scale(1.1, 0.9);
+    }
+
+    15% {
+      transform: translateY(-40px) scale(0.9, 1.1)
+    }
+
+    23% {
+      transform: translateY(-40px) scale(1, 1) rotate(17deg)
+    }
+
+    38% {
+      transform: translateY(-40px) scale(1, 1) rotate(-17deg)
+    }
+
+    53% {
+      transform: translateY(-40px) scale(1, 1) rotate(17deg)
+    }
+
+    68% {
+      transform: translateY(-40px) scale(1, 1) rotate(-17deg)
+    }
+
+    76% {
+      transform: translateY(0) scale(1.05, 0.95)
+    }
+
+    82% {
+      transform: translateY(-7px) scale(1, 1)
+    }
+
+    90% {
+      transform: translateY(0) scale(1, 1)
+    }
+  }
+
+  #jsA {
+    animation-name: jump-shaking;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: translateX(0) scale(1, 1)
+    }
+
+    10% {
+      transform: translateX(50px)
+    }
+
+    30% {
+      transform: translateX(-75px)
+    }
+    100% {transform: translateX(-75px)}
+  }
+
+  #rA {
+    animation-name: reveal;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #fioA {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeOutOpacity {
+    0% {
+      opacity: 1;
+    }
+
+    25% {transform: translateY(-7px)}
+
+    40% {transform: translateY(2px)}
+
+    45% {transform: translateY(0px)}
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #fooA {
+    opacity: 1;
+    animation-name: fadeOutOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+/* cookie styles */
+.cookie {
+    position: relative;
+    top: 100px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    filter: drop-shadow(2px 5px 2px rgb(80, 80, 80)) drop-shadow(-1px -1px 0 rgb(255, 179, 0));
+  }
+
+  .cookie:hover {
+    filter: brightness(115%);
+  }
+
+  .shadow {
+    position: relative;
+    top: 82px;
+    width: 60px;
+    height: 25px;
+    margin-left: 37%;
+    margin-right: 63%;
+    z-index: 1;
+    box-shadow: 0 1px 10px rgb(155, 234, 250), 0 0 50px rgba(125, 216, 234, 0.872) inset;
+    border-radius: 50% 50% 50% 50%;
+  }
+
+  .oshadow {
+    position: relative;
+    top: 82px;
+    width: 60px;
+    height: 25px;
+    margin-left: 37%;
+    margin-right: 63%;
+    z-index: 1;
+    box-shadow: 0 1px 10px black, 0 0 50px grey inset;
+    border-radius: 50% 50% 50% 50%;
+  }
+
+  #message {
+    text-align: center;
+    text-decoration: underline;
+    font-style: bold;
+    font-size: 15px;
+    margin-top: 3%;
+    color: black;
+  }
+
+  /* fortune styles */
+  .fortune-box {
+    opacity: 0;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    border: solid black;
+    border-width: 2px 1.5px; 
+    height: 150px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25%;
+    z-index: 0;
+}
+
+  #fortune-text {
+    font-style: italic;
+    font-size: 15px;
+    color: black;
+  }
+
