@@ -7,17 +7,12 @@ let count = 0;
 
 // check if daily fortune available
 chrome.storage.sync.get('Daily', (data) => {
-  if (data.Daily) {
-    if (compareDates(data.Daily)) {
-      console.log(data.Daily);
-      isDaily = false;
-    }
-    else {
-      document.getElementById("message").innerText = "Today's Fortune";
-      fortune.style.opacity = 1;
-      cookieShadow.id = "fioA";
-      modifyCookie(cookie);
-    }
+  if (data.Daily && !compareDates(data.Daily)) {
+    isDaily = false;
+    document.getElementById("message").innerText = "Today's Fortune";
+    fortune.style.opacity = 1;
+    cookieShadow.id = "fioA";
+    modifyCookie(cookie);
   }
   else {
     const today = createDate();
