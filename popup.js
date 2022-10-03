@@ -46,9 +46,3 @@ cookie.onclick = () => {
   }
 }
 
-// TO-DO LIST
-// Replace audio with "poyo" Kirby
-// set storage item with date
-
-
-// AI generated text
