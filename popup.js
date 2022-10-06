@@ -31,6 +31,7 @@ const sound = new Audio("sound.wav");
 
 // open fortune cookies
 cookie.onclick = () => {
+  chrome.action.setBadgeText({text: ''});
   if (isDaily && count == 0) {
     count++;
     sound.play();
