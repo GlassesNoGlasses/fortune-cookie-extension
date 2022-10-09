@@ -3,7 +3,7 @@
   "description": "Random daily fortunes anywhere, anytime.",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
